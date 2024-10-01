@@ -4,8 +4,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 from pathlib import Path
 
+current_dir = Path(__file__).resolve().parent
 
-data_file = Path('..') / 'data'/ 'AAPL_data.csv'
+data_file = current_dir.parent/ 'data' / 'AAPL_data.csv'
 data = pd.read_csv(data_file)
 
 X = data[['Open', 'High', 'Low', 'Volume']]
