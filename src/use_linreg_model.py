@@ -17,7 +17,7 @@ data = pd.read_csv(data_file)
 recent_data = data[['Open', 'High', 'Low', 'Volume']].iloc[-1].values.reshape(1, -1)
 
 # Number of days to predict
-days_to_predict = 10  # Change this number to predict any number of future days
+days_to_predict = 1000  # Change this number to predict any number of future days
 predicted_prices = []
 
 # Predict future stock prices for multiple days
