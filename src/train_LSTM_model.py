@@ -65,11 +65,11 @@ y_train, y_test = y[:train_size], y[train_size:]
 # Build the LSTM model
 model = Sequential()
 model.add(Input(shape=(X_train.shape[1], len(features))))  # Define input layer
-model.add(LSTM(units=100, return_sequences=True))
-model.add(Dropout(0.2))  # Add dropout to prevent overfitting
-model.add(LSTM(units=100, return_sequences=False))
-model.add(Dropout(0.2))
-model.add(Dense(units=50))  # Add more neurons for more complexity
+model.add(LSTM(units=500, return_sequences=True))
+model.add(Dropout(0.25))  # Add dropout to prevent overfitting
+model.add(LSTM(units=500, return_sequences=False))
+model.add(Dropout(0.25))
+model.add(Dense(units=250))  # Add more neurons for more complexity
 model.add(Dense(units=1))   # Final output layer to predict the next price
 
 # Compile the model
