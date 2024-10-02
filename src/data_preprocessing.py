@@ -19,7 +19,7 @@ def download_stock_data(ticker, start_date, end_date):
 
 if __name__ == "__main__":
     ticker = "AAPL"
-    start_date = "2020-01-01"
-    end_date = "2024-09-01"
+    start_date = "2010-01-01"
+    end_date = "2024-09-26"
     stock_data = download_stock_data(ticker, start_date, end_date)
     print(stock_data.head())
